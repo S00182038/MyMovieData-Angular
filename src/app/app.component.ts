@@ -11,9 +11,10 @@ import { from } from 'rxjs';
 export class AppComponent {
   movieData: IOMDBResponse;
   errorMessage: string;
-  constructor(private _omdbService: OmdbApiService) {
- }
- getMovieDeatils(movieName: string): boolean {
+  imageHeight = 300;
+
+  constructor(private _omdbService: OmdbApiService) {}
+  getMovieDetails(movieName: string): boolean {
     this._omdbService.getMovieData(movieName).subscribe(movieData => {
       this.movieData = movieData;
       console.log('getMovieDetails:' + this.movieData);

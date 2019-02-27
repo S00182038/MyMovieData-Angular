@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { OmdbApiService } from './services/omdb-api.service';
 
 @NgModule({
   declarations: [
@@ -10,7 +9,7 @@ import { OmdbApiService } from './services/omdb-api.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

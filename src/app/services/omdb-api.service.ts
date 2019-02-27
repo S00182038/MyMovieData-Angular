@@ -13,7 +13,7 @@ export class OmdbApiService {
   private _key = '&apikey=b3a97032';
   constructor(private _http: HttpClient) { }
   getMovieData(movieName): Observable<IOMDBResponse> {
-    console.log( 'URL :' + this._siteURL + movieName + this._key);
+    console.log('URL : ' + this._siteURL + movieName + this._key);
    return this._http.get <IOMDBResponse> (this._siteURL + movieName + this._key).pipe(
    tap(data => console.log('All:' + JSON.stringify(data))),
    catchError(this.handleError));
