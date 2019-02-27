@@ -1,3 +1,4 @@
+
 <h2 class="ui grey header">
   <img class="ui image" src="../assets/images/Movie.jpg">
   <div class="content">
@@ -11,7 +12,10 @@
   <button class="ui button primary" (click)="getMovieDetails(movieName.value)" type="submit">Submit</button>
 </form>
 
-<div *ngIf="movieData" class="ui button primary" class="ui raised segment">
+<div *ngIf="movieData" class="ui button primary" class="ui raised segment" id="display" >
   <h3 *ngIf="movieData">Movie : {{ movieData.Title }}</h3>
   <img *ngIf="movieData" src='{{movieData.Poster}}' [style.height.px]='imageHeight' />
+  <h2 *ngIf="movieData">Movie : {{ movieData.BoxOffice }}</h2>
+  <h2 *ngIf="movieData">Movie : {{ movieData.Production }}</h2>
+  <h2 *ngIf="movieData">Movie : {{ movieData.Website }}</h2>
 </div>
